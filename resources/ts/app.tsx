@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { createRoot } from 'react-dom/client'
+import * as React from 'react'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './routes'
  
-const App = () => {
-    return <h1>Hello React !</h1>
+const App: React.FC = () => {
+    return (
+        <RouterProvider router={router} />
+    )
 }
  
-const root = createRoot(
-    document.getElementById('app') as HTMLElement
-)
-root.render(<App />)
+export default App
